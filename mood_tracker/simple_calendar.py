@@ -26,3 +26,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    # habit_tracker.py (continued)
+def show_streaks():
+    print("Showing habit streaks (placeholder)")
