@@ -9,3 +9,9 @@ def extract_sentences(text):
 
 if __name__ == "__main__":
     main()
+
+    # text_summarizer.py (continued)
+def score_sentences(sentences):
+    print("Scoring sentences (placeholder)")
+    scores = {s: 1 for s in sentences}
+    return scores
