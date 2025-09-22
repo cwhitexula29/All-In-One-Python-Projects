@@ -3,6 +3,7 @@
 A simple To-Do List app skeleton using Tkinter.
 Google Calendar API integration will be added later.
 """
+from logging import root
 import tkinter as tk
 
 def main():
@@ -37,4 +38,7 @@ def add_task(task):
             remove_button.pack(pady=10)
             print("Add task function")
 
-            
+
+            def sync_with_google_calendar():
+                # Placeholder function for Google Calendar API integration
+                print("Syncing with Google Calendar (placeholder)")
