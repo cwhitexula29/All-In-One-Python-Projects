@@ -12,13 +12,24 @@ def main():
     year_entry.pack(pady=5)
     
     def show_calendar():
-        # Placeholder function for showing calendar
-        print("Show calendar function placeholder")
+        year = year_entry.get()
+        if not year.isdigit():
+            messagebox.showerror("Invalid Input", "Please enter a valid year")
+            return
+        display_calendar(year)
     
     tk.Button(root, text="Show Calendar", command=show_calendar).pack(pady=5)
     tk.Button(root, text="Exit", command=root.destroy).pack(pady=5)
     
     root.mainloop()
 
-if __name__ == "__main__":
-    main()
+def display_calendar(year):
+    try:
+        year = int(year)
+        if year < 1:
+            raise ValueError
+        cal = calendar.TextCalendar()
+        cal_str = cal.formatyear(year)
+        messagebox.showinfo(f"Calendar for {year}", cal_str)
+    except ValueError:
+        messagebox.showerror("Invalid Input", "Please enter a valid positive year")
