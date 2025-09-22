@@ -33,3 +33,17 @@ def display_calendar(year):
         messagebox.showinfo(f"Calendar for {year}", cal_str)
     except ValueError:
         messagebox.showerror("Invalid Input", "Please enter a valid positive year")
+
+
+def show_calendar(year):
+    try:
+        year = int(year)
+        if year < 1:
+            raise ValueError
+        cal = calendar.TextCalendar()
+        cal_str = cal.formatyear(year)
+        messagebox.showinfo(f"Calendar for {year}", cal_str)
+    except ValueError:
+        messagebox.showerror("Invalid Input", "Please enter a valid positive year")
+
+        display_calendar(year)
