@@ -11,3 +11,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# music_recommender.py (continued)
+def connect_to_spotify():
+    print("Connecting to Spotify API (placeholder)")
